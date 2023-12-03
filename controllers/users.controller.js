@@ -26,7 +26,7 @@ const createUser = (req, res) => {
 const updateUser = (req, res) => {
   const userId = req.params.id;
   const { username, email } = req.body;
-  users
+  users = users
     .filter((user) => user.id === userId)
     .map((selectedUser) => {
       selectedUser.username = username;
